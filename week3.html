@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3</title>
+    <link rel="icon" type="image/x-icon" href="./homepage/bombicon.png">
+
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        padding: 0;
+        margin: 0;
+        min-height: 500vh;
+        background-color: rgb(107, 197, 236);
+        animation: body 1s linear;
+        }
+        @keyframes body {
+        to {background-color: rgb(233, 31, 159);}
+        }
+
+        header {
+        font-family: gridfont;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 10vh;
+        }
+
+        h1 {
+        text-align: center;
+        font-family: gridfont;
+        }
+
+       h2 {
+        text-align: center;
+        font-size: x-large;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: gridfont;
+        }
+
+       h3 {
+        text-align: center;
+        font-family: gridfont;
+        }
+
+        p {
+            font-family: square2; 
+            text-align: center;
+            padding-top: 20px;
+            padding-left: 35%;
+            padding-right: 35%;
+        }
+
+        figcaption {
+            font-family: square2;
+            padding-left: 3px;
+            font-size: smaller;
+        }
+
+        @font-face {
+            font-family: gridfont;
+            src: url(./week3/ygrid.ttf);
+        }
+
+        @font-face {
+            font-family: square2;
+            src: url(./week3/square2.ttf);
+        }
+
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+        .progress {
+        height: 3px;
+        width: 0%;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation: progress 1s linear;
+        }
+        @keyframes progress {
+        to {background-color: rgb(233, 31, 159);
+        width: 100%;}
+        }
+
+        .cube-wrap {
+        --size: 20vmin;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        perspective: 100vmin;
+        }
+        .cube {
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+        animation: cube 1s linear;
+        }
+        @keyframes cube {
+        to {
+            transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+        }
+        }
+
+        .side {
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background-color: #eee;
+        backface-visibility: visible;
+        top: calc(var(--size) * -.5);
+        left: calc(var(--size) * -.5);
+        }
+        .top {
+        background-color: #fff;
+        transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+        }
+        .bottom {
+        background-color: #999;
+        transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+        }
+        .left {
+        background-color: #ccc;
+        transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+        }
+        .right {
+        background-color: #ddd;
+        transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+        }
+        .front {
+        background-color: #aaa;
+        transform: translateZ(calc(var(--size) * .5));
+        }
+        .back {
+        background-color: #bbb;
+        transform: translateZ(calc(var(--size) * -.5));
+        }
+
+        :root * {
+        /* Pause the animation */
+        animation-play-state: paused;
+        /* Bind the animation to scroll */
+        animation-delay: calc(var(--scroll) * -1s);
+        /* These last 2 properites clean up overshoot weirdness */
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        }
+
+        .previous {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .nextup {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+       }
+
+       .text {
+        font-size: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 45px;
+        text-shadow: 0 0 15px white;
+       }
+
+</style>
+
+</head>
+<body>
+
+    <div class="previous">
+        <div class="imageflex">
+            <a href="./index.html">
+                <img src="./homepage/homepage.png" 
+                style="height: 100px; width: auto;">
+                </a>
+        </div>
+        <div class="text">
+            <h1 style="color: white">BACK TO HOMEPAGE</h1>
+        </div>
+    </div>
+
+    <div class="progress"></div>
+    <div class="cube-wrap">
+        <div class="cube">
+            <div class="side top"></div>
+            <div class="side bottom"></div>
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+        </div>
+    </div>
+    <script src="./java/week3.js"></script>
+    <!--thank you to css-tricks.com-->
+
+    <center>
+        <img src="./week3/gridani.gif"
+        height="200px";
+        style="transform: translateY(700px)">
+    </center>
+    
+    <header style="padding-top: 50%;">GRID SYSTEMS</header>
+    <br>
+    <p>They're essential for helping organise a layout in design, especially in interface designs. Thus readability, salience, and overall visual and aesthetic harmony can be enhanced by its structuring of elements.
+    </p>
+    <p>These include formattings such as columns, modular grids, heirarchal grids, and apply to many mediums from a font to urban landscape systems:
+    </p>
+
+    <br>
+
+    <div class="row">
+        <div class="column">
+            <figure>
+                <img src="./week3/durer.jpeg" alt="durer" style="width:100%">
+                <figcaption><em>Opera Alberti Dureri</em>,      Albert Durer</figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img src="./week3/tram.jpg" alt="trams" style="width:100%">
+                <figcaption>Melbourne's Tram System</figcaption>
+            </figure>
+          </div>
+        <div class="column">
+            <figure>
+                <img src="./week3/brockmann.jpg" alt="brockmann" style="width:100%">
+                <figcaption><em>Beethoven Poster</em>, Josef Muller-Brockmann</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <figure style="transform: translate(150px,-180px);">
+        <img src="./week3/nytimes.jpg"
+        alt="new-york-times"
+        style="height: 300px">
+        <figcaption>The New York Times Newspaper in 2000</figcaption>
+    </figure>
+
+    <figure style="transform: translate(850px,-310px);">
+        <img src="./week3/slamdunk.jpg"
+        alt="slam-dunk"
+        style="height: 500px">
+        <figcaption><em>Slam Dunk</em>, Takehiko Inoue</figcaption>
+    </figure>
+    
+    <header>RESPONSIVENESS</header>
+    <br>
+    <p>
+        Responsive design concerns the alteration of web pages to adapt to different screen sizes and devices including desktops, tablets, and phones.
+    </p>
+    <p>
+        This means incorporating a <b>fluid layout</b> that will automatically resize and reposition the elements of a web page fittingly.
+    </p>
+
+    <br>
+
+    <center>
+        <marquee
+        direction="down"
+        width="900"
+        height="700"
+        behavior="alternate"
+        style="border:solid">
+        <marquee behavior="alternate">
+            <h4 style="font-family: gridfont;">Not my website though haha, sorry!</h4>     
+            <h4 style="font-family: gridfont;"> But hey look what I can do woooooo</h4>
+        </marquee>
+        </marquee>
+    </center>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="nextup">
+        <div class="text">
+            <h1 style="color: black;">NEXT UP</h1>
+        </div>
+        <div class="imageflex">
+            <a href="./activities3.html">
+                <img src="./homepage/class-activites.png" style="height: 100px;">
+            </a>
+        </div>
+    </div>
+   
+</body>
+</html>

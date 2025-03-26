@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2</title>
+    <link rel="icon" type="image/x-icon" href="./homepage/bombicon.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+        color: greenyellow;
+        font-size: xx-large;
+        font-family:'Courier New', Courier, monospace
+       } 
+
+       h1 {
+        text-align: center;
+       }
+
+       h2 {
+        text-align: center;
+        font-size: x-large;
+        padding-left: 10px;
+        padding-right: 10px;
+       }
+
+       h3 {
+        text-align: center;
+       }
+
+       body {
+        font-size: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        color: chartreuse;
+        text-shadow: 0 0 15px chartreuse;
+        background-image: url(./week1/starrysky.jpeg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+         background-size: cover;
+       }
+
+       p {
+        text-align: center;
+       }
+
+       .content {
+        text-align: center;
+        margin-left: 30%;
+        margin-right: 30%;
+       }
+       
+       .grab {cursor: -webkit-grab; cursor: grab;}
+
+       .column {
+        font-size: 12px;
+        text-shadow: none;
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+       }
+
+       .row::after {
+        content: "";
+        display: table;
+        clear: both;
+       }
+
+       .previous {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .nextup {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+       }
+
+       .text {
+        font-size: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 45px;
+        text-shadow: 0 0 15px white;
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="previous">
+        <div class="imageflex">
+            <a href="./index.html">
+                <img src="./homepage/homepage.png" 
+                style="height: 100px; width: auto;">
+                </a>
+        </div>
+        <div class="text">
+            <h1 style="color: white">BACK TO HOMEPAGE</h1>
+        </div>
+    </div>
+
+    <center>
+        <img src="./week2/spinningearth.gif"
+        height="150px";
+        width="auto">
+    </center>
+   
+    <header><h1><marquee direction="right">What is WWW?</marquee></h1></header>
+
+
+    <div class="content">
+        <p>The <b>World Wide Web</b> is a collection of webpages and information worldwide, and is accessed through the internet.</p>
+        <br>
+       <p> We can thank computer scientist Tim Berners-Lee for inventing the WWW in 1989 - pay respects by tickling him with your cursor. He likes that. </p>
+    </div>
+
+    <br>
+
+    <div class="grab">
+        <center>
+        <img src="./week2/timbernerslee.jpg"
+        style="height: 200px; width: auto;">
+        </center>
+    </div>
+
+    <br>
+    <br>
+
+        <h2 style="color: chartreuse;">The web has undergone many changes since its creation, providing new features and modes of accessibility:</h2>
+        <h3 style="color: darkolivegreen;">(click the top left arrows of each stage)</h3>
+    
+    <div class="row">
+        <div class="column"; style="background-color: whitesmoke; color: black;">
+            <details>
+                <summary><h2>WEB 1.0</h2></summary>
+            <p>The first stage of the WWW and also known as the <b>Static Web</b> or <b>read-only web</b>. It served mainly as an information repository linked together by hyperlinks where users consumed content passively.</p>
+            <center>
+                <figure>
+                    <img src="./week2/web1.jpg"
+                    style="height: 170px">
+                    <figcaption>Yahoo! in 1994</figcaption>
+                </figure>
+             </center>
+            <br>
+        </details>
+        </div>
+
+        <div class="column"; style="background-color: whitesmoke; color: black;">
+            <details>
+           <summary><h2>WEB 2.0</h2></summary>
+            <p>Also called the <b>read-write web</b>. Users could now generate and contribute their own content; thus emerging social media and blogging. There was also an emphasis on ease of use and interoperability.</p>
+         <center>
+            <figure>
+                <img src="./week2/web2.png";
+                style="height: 200px">
+                <figcaption>Youtube in 2005</figcaption>
+            </figure>
+        </center>
+         </details>
+        </div>
+
+        <div class="column"; style="background-color: whitesmoke; color: black;">
+            <details>
+            <summary><h2>WEB 3.0</h2></summary>
+            <p>The third stage is what we know today and is also referred to as the <b>Semantic</b> or <b>3D Web</b>. It is primarily characterised by decentralisation, ubiquity, and artificial intelligence (AI).</p>
+            <center>
+                <figure>
+                    <img src="./week2/web3.png";
+                    height="160px">
+                    <figcaption>ChatGPT in 2024</figcaption>
+                </figure>
+            </center>
+        </div>
+            </details>
+    </div>
+
+    <br>
+
+    <header><h1><marquee>What Next?</marquee></h1></header>
+
+    <div class="content">
+        <p>
+            There are two more generations after 3.0. While the aforementioned is widely used now, we experience Web 4.0 in its developmental stages.
+        </p>
+        <p>
+            Otherwise called the <b>Intelligent</b> or <b>Symbiotic Web</b>, Web 4.0 focuses mainly on advancing AI and machine learning, furthering decentralisation.
+        </p>
+        <img src="./week2/wildrobot.gif"
+        height="270px">
+        <p>
+            The generation after, <b>Web 5.0</b>, is regarded as the next iteration of its predecessor, and is not clearly established given its development still being in its early stage.
+        </p>
+        <p>
+            Web 5.0 proposes an empowerment of communication between machine and humans, improving upon 4.0's emphasis of machine learning and AI. It also aims to develop upon the domain of blockchain, aiding users in safely controlling their identity in the web.
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="nextup">
+        <div class="text">
+            <h1 style="color: white;">NEXT UP</h1>
+        </div>
+        <div class="imageflex">
+            <a href="./activities2.html">
+                <img src="./homepage/class-activites.png" style="height: 100px; width: auto; float: right;">
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

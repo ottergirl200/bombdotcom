@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2</title>
+    <link rel="icon" type="image/x-icon" href="./homepage/bombicon.png">
+    
+    <style>
+
+        body {
+            background-image: url(./week2/wk2notepad.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Biro
+        }
+
+        @font-face {
+            font-family: Biro;
+            src: url(./week1/Biro_Script_reduced.ttf);
+        }
+
+        header {
+            font-size: x-large;
+            text-align: center;
+            color: darkred;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: x-large;
+            color: darkred;
+            background-color:rgba(255, 0, 0, 0.2)
+        }
+
+        h3 {
+            color:darkred;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .scrollable-container {
+        width: 720px;
+        height: 580px;
+        border: 1px solid whitesmoke;
+        overflow: auto; /* Enable scrolling */
+        padding: 10px; /* Add some space for the text */
+        position: absolute;
+        top: 14%;
+        right: 20em
+        }
+
+       .previous {
+        display: inline-flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .nextup {
+        display: inline-flex;
+        align-items: right;
+        justify-content: right;
+        transform: translateX(570px);
+       }
+
+       .text {
+        font-size: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 45px;
+       }
+
+       .container {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .containertext {
+        font-size: 20px;
+        padding-left: 20px;
+       }
+
+       .cutouts {
+        padding-left: 50px;
+        padding-right: 50px;
+       }
+
+       /*javascript, check below for credit*/
+
+       #outerCircleText {
+        color: darkred;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3000;
+        cursor: default;
+        }
+
+        #outerCircleText div {
+        position: relative;
+        }
+
+        #outerCircleText div div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        }
+
+    </style>
+   
+</head>
+<body>
+
+        <div class="previous">
+            <div class="imageflex">
+                <a href="./index.html">
+                    <img src="./homepage/homepage.png" 
+                    style="height: 100px; width: auto;">
+                    </a>
+            </div>
+            <div class="text">
+                <h1 style="color: white">BACK TO HOMEPAGE</h1>
+            </div>
+        </div>
+
+        <div class="scrollable-container">
+            
+            <header><h1>CLASS THIS WEEK:</h1></header>
+            <center>
+                <img src="./week2/plankton.jpg"
+                style="transform: translateY(-10px)"
+                height = "150px">
+            </center>
+
+            <h2>ACTIVITIES</h2>
+
+            <div class="container">
+                  <img src="./week2/crazy8.jpg"
+                  height="250px">
+                <div class="containertext">
+                    <h3>Crazy Eights</h3>
+                    <p style="text-align: left;">In one minute sessions of eight, we had to brainstorm and draw wireframes for potential website layouts.</p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container">
+                <video width="320" height="240" controls>
+                    <source src="./week2/prototype.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                <div class="containertext">
+                    <h3>Prototyping</h3>
+                    <p style="text-align: left;">Then we recreated one of the crazy eights as a paper prototype.</p>
+                </div>
+            </div>
+
+
+            <h2>WORKBOOK PROGRESS</h2>
+
+            <br>
+            <br>
+
+            <div class="cutouts">
+                <img src="./week2/github.png"
+                height="300px"
+                style="transform: rotate(-10deg);">
+
+                <img src="./week2/wk2wireframe.jpg"
+                height="200px"
+                style="transform: rotate(20deg)">
+            </div>
+
+            <br>
+            <br>
+
+            <center>
+                <p>This week; with some in-class help, we finally got Github working which means this website can finally be shared.</p>
+                <p>The formatting for this week's page went pretty smooth, just a lot of playing around with positioning text andother elements.</p>
+            </center>
+
+            <div class="nextup">
+                <div class="text">
+                    <h1 style="color: black;">NEXT UP</h1>
+                </div>
+                <div class="imageflex">
+                    <a href="./week3.html">
+                        <img src="./homepage/class-activites.png" style="height: 100px;">
+                    </a>
+                </div>
+            </div>
+            
+          </div>
+
+          <script src="./java/mouse2.js"></script>
+          <!--javascript from https://www.javascriptfreecode.com-->
+
+
+</body>
+</html>
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1</title>
+    <link rel="icon" type="image/x-icon" href="./homepage/bombicon.png">
+    
+    <style>
+
+        body {
+            background-image: url(./homepage/frnotepad.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Biro
+        }
+
+        @font-face {
+            font-family: Biro;
+            src: url(./week1/Biro_Script_reduced.ttf);
+        }
+
+        header {
+            font-size: x-large;
+            text-align: center;
+            color: cadetblue;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: x-large;
+            color: cadetblue;
+            background-color:rgb(0, 139, 139, 0.2)
+        }
+
+        h3 {
+            color:cadetblue;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .scrollable-container {
+        width: 720px;
+        height: 580px;
+        border: 1px solid whitesmoke;
+        overflow: auto; /* Enable scrolling */
+        padding: 10px; /* Add some space for the text */
+        position: absolute;
+        top: 14%;
+        right: 20em
+        }
+
+       .previous {
+        display: inline-flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .nextup {
+        display: inline-flex;
+        align-items: right;
+        justify-content: right;
+        transform: translateX(570px);
+       }
+
+       .text {
+        font-size: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 45px;
+       }
+
+       .container {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .containertext {
+        font-size: 20px;
+        padding-left: 20px;
+       }
+
+       .cutouts {
+        padding-left: 50px;
+        padding-right: 50px;
+       }
+
+       /*javascript, check below for credit*/
+
+       #outerCircleText {
+        color: rgb(77, 129, 130);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3000;
+        cursor: default;
+        }
+
+        #outerCircleText div {
+        position: relative;
+        }
+
+        #outerCircleText div div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        }
+
+    </style>
+   
+</head>
+<body>
+
+        <div class="previous">
+            <div class="imageflex">
+                <a href="./index.html">
+                    <img src="./homepage/homepage.png" 
+                    style="height: 100px; width: auto;">
+                    </a>
+            </div>
+            <div class="text">
+                <h1 style="color: white">BACK TO HOMEPAGE</h1>
+            </div>
+        </div>
+
+        <div class="scrollable-container">
+            
+            <header><h1>CLASS THIS WEEK:</h1></header>
+            <center>
+                <img src="./week1/sassyemoji.png"
+                style="transform: translateY(-10px)"
+                height = "150px">
+            </center>
+
+            <h2><strike>INTER</strike>ACTIVITIES</h2>
+            <div class="container">
+                <img src="./week1/gestures.jpg"
+                height="250px">
+                <div class="containertext">
+                    <h3>Gestures</h3>
+                    <p style="text-align: left;">Brainstorming interactive gestures that activate certain technologies. None of which exist yet and can make perfect sense or nonsense.</p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container">
+                <img src="./week1/wireframe.jpg"
+                height="250px"><div class="containertext">
+                    <h3>Wireframe Relay</h3>
+                    <p style="text-align: left;">Sketching a website wireframe.</p>
+                    <br>
+                    <p>then..</p>
+                    <br>
+                    <p style="text-align: right;">In groups of four, relay-racing to build it in html paper tags.</p>
+                </div>
+                <img src="./week1/htmlrelay.jpg"
+                height="350px">
+            </div>
+
+            <h2>WORKBOOK PROGRESS</h2>
+
+            <div class="cutouts">
+                <img src="./week1/helloworld.png"
+                height="300px"
+                style="transform: rotate(-20deg);">
+
+                <img src="./week1/wk1wireframe.jpg"
+                height="200px"
+                style="transform: rotate(20deg)">
+
+                <video width="320" height="240" controls style="transform: translate(100px,-300px);">
+                    <source src="./week1/hmpageprelim.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+
+                <img src="./week1/firstoff.png"
+                height="250px"
+                style="transform: translate(200px,-270px);">
+            </div>
+
+            <center>
+                <p style="transform: translateY(-230px);">This was where we started to dip our toes into coding websites. At first it was all about having fun but now we must focus.</p>
+                <p style="transform: translateY(-230px);">As an intro into coding in HTML, we said <b>Hello World!</b>. Then the beast was unleashed, exploring different elements and functions to add to my preliminary website. Stuff like background images and gifs.</p>
+            </center>
+
+            <div class="nextup">
+                <div class="text">
+                    <h1 style="color: black;">NEXT UP</h1>
+                </div>
+                <div class="imageflex">
+                    <a href="./week2.html">
+                        <img src="./homepage/class-activites.png" style="height: 100px;">
+                    </a>
+                </div>
+            </div>
+            
+          </div>
+
+          <script src="./java/mouse1.js"></script>
+          <!--javascript from https://www.javascriptfreecode.com-->
+
+
+</body>
+</html>
+

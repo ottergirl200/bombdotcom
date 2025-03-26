@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="./homepage/bombicon.png">
+
+    <style>
+
+        * {
+            cursor: progress;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            font-size: xx-large;
+            font-family: square
+        }
+
+        h1 {
+            text-align: center;
+            font-family: square;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: square;
+        }
+
+        p {
+            font-family: square;
+            text-align: center;
+            font-size: larger;
+        }
+
+        @font-face {
+            font-family: square;
+            src: url(./homepage/squaretype.ttf);
+        }
+
+        .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        margin-top: 40vh;
+        margin-bottom: 40vh;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+    <center>
+        <div class="loader">
+        </div>
+    </center>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header><h2>found me..</h2></header>
+    <header><h1 style="transform:translateY(-10px);">welcome to bomb.com</h1></header>
+    <br>
+    <br>
+    <br>
+    <h1>get started by clicking one of these images:</h1>
+    <br>
+    <div class="row">
+        <div class="column">
+            <figure>
+                <a href="./week1.html">
+                    <img src="./week1/russian-boy-dancing.gif" alt="Week1" style="width:100%">
+                  </a>
+                <figcaption><p>Week 1</p></figcaption>
+            </figure>
+        </div>
+
+        <div class="column">
+            <figure style="transform: translateY(-40px);">
+                <a href="./week2.html">
+                    <img src="./week2/spinningearth.gif" alt="Week2" 
+                style="width:100%; transform: scale(80%)";>
+                  </a>
+                <figcaption><p style="transform: translateY(-50px);">Week 2</p></figcaption>
+            </figure>
+        </div>
+
+        <div class="column">
+            <figure>
+                <a href="./week3.html">
+                    <img src="./week3/gridani.gif" alt="Week2" 
+                style="width:100%">
+                  </a>
+                <figcaption><p>Week 3</p></figcaption>
+            </figure>
+        </div>
+      </div>
+
+      <marquee style="transform: translateY(-200px);">
+        <a href="./easteregg.html">
+            <img src="./homepage/bomb.png">
+        </a>
+      </marquee>
+
+</body>
+</html>

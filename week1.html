@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1</title>
+    <link rel="icon" type="image/x-icon" href="./homepage/bombicon.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+        font-size: xx-large;
+        font-family: Akira;
+        color: blueviolet;
+       } 
+
+       h1 {
+        text-align: center;
+       }
+
+       h2 {
+        text-align: center;
+        font-size: x-large;
+        padding-left: 10px;
+        padding-right: 10px;
+       }
+
+       h3 {
+        text-align: center;
+        font-family: Akira;
+        color: white;
+       }
+
+       body {
+        font-size: 15px;
+        font-family:Arial, Helvetica, sans-serif;
+        color:blueviolet;
+        text-shadow: 0 0 15px blue;
+        background-color: black;
+       }
+
+       @font-face {
+            font-family: Akira;
+            src: url(./week1/Akira.otf);
+        }
+
+        #drag {
+        position: absolute;
+        }
+
+        #qtip {
+        padding: 10px;
+        cursor: move;
+        }
+
+       p {
+        text-align: center;
+       }
+
+       .column {
+        float: left;
+        width: 33.33%;
+        }
+
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+       .previous {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+       }
+
+       .nextup {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+       }
+
+       .text {
+        font-size: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 45px;
+        text-shadow: 0 0 15px white;
+       }
+
+       .caption {
+        font-size: 10px;
+        text-shadow: 0 0 15px blue;
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="previous">
+        <div class="imageflex">
+            <a href="./index.html">
+                <img src="./homepage/homepage.png" 
+                style="height: 100px; width: auto;">
+                </a>
+        </div>
+        <div class="text">
+            <h1 style="color: white">BACK TO HOMEPAGE</h1>
+        </div>
+    </div>
+
+    <center>
+        <p style="color: rgb(255, 255, 255, 0.3); text-shadow: 0 0 15px white;">hey you! drag my boombox closer and play it!</p>
+        <img src="./week1/russian-boy-dancing.gif"
+        height="200px">
+    </center>
+
+    <div id="drag">
+        <div id="qtip"><p style="transform: translateY(15px); color: white;">boombox handle</p></div>
+        <audio controls autoplay muted>
+            <source src="./week1/QTip_Lets_Ride.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+      </div>
+   
+
+    <header><h1>WELCOME TO INTERACTIVE MEDIA</h1></header>
+
+    <header><h2 style="color: white;">Human-Computer Interaction/Interfaces</h2></header>
+    <p style=" padding-left: 40%;
+        padding-right: 40%;"><b>HCI</b> is <em>where human meets technology</em>, our senses colliding with that of the computer in a mutuality of action and reaction. This interaction with technology focuses on design, implementation, usability, efficiency, and user experience.
+    </p>
+
+    <br>
+    <br>
+
+    <h3>HCI can be classified in these ways:</h3>
+    <div class="row">
+        <div class="column">
+            <h3>SENSE</h3>
+            <p style="padding-left: 50px; padding-right: 50px;">
+                Interactions that enhance our natural senses. For example, these pedal bins that when open upon being stepped on play a symphony.
+                <figure style="padding-left: 10px;">  
+                    <img src="./week1/SHYU-RUEY-SHIANN_Between-I_01-750x500.jpg"
+                    style="padding-top: 20px; height: 260px;">
+                    <figcaption class="caption"><em>Between</em> Shyu Ruey Shiann</figcaption>
+                </figure>
+            </p>
+        </div>
+        <div class="column">
+            <h3>NONSENSE</h3>
+            <p style="padding-left: 50px; padding-right: 50px;">
+                Interactions that invert and play with our senses. Take this mouse that pops its head out of a hole and speaks to us with the voice of a little girl's for example.
+                <figure style="padding-left: 40px;">  
+                    <img src="./week1/theend.jpeg"
+                    style="padding-top: 20px; height: 260px;">
+                    <figcaption class="caption"><em>The End</em> Ryan Gander</figcaption>
+                </figure>
+            </p>
+        </div>
+        <div class="column">
+            <h3>SYNAESTHESIA</h3>
+            <p style="padding-left: 50px; padding-right: 50px;">
+               Interactions where one sense translates into another sense. Like these grills that allow its user to listen to music through their teeth.
+               <figure style="padding-left: 50px">  
+                <img src="./week1/playagrill.png"
+                style="padding-top: 20px; height: 260px;">
+                <figcaption class="caption"><em>PLAY-A-GRILL</em> Aisen Caro Chachin</figcaption>
+            </figure>
+            </p>
+        </div>
+      </div>
+
+
+    <div class="nextup">
+        <div class="text">
+            <h1 style="color: white;">NEXT UP</h1>
+        </div>
+        <div class="imageflex">
+            <a href="./activities1.html">
+                <img src="./homepage/class-activites.png" style="height: 100px; width: auto; float: right;">
+            </a>
+        </div>
+    </div>
+
+    <script src="./java/drag.js"></script>
+    
+</body>
+</html>
